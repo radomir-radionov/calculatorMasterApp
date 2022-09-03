@@ -4,7 +4,10 @@ const font = 'sans-serif'
 
 // Color palette
 const black = '#000000'
+const blackLight = '#434343'
+const gray = '#707070'
 const white = '#ffffff'
+const whiteDark = '#F2F2F2'
 const error = '#c86464'
 const primary = '#c06c84'
 const secondary = '#6c5b7b'
@@ -45,13 +48,16 @@ export default {
   boxShadows,
   font,
   spaces: [0, 4, 8, 16, 32, 64, 128],
-  fontSizes: [12, 14, 16, 20, 24, 32, 40, 56, 72, 80],
+  fontSizes: [12, 14, 16, 20, 24, 32, 40, 56, 64, 72, 80],
   colors: {
     primary,
     secondary,
     secondaryLight,
     black,
+    blackLight,
+    gray,
     white,
+    whiteDark,
     error,
   },
 }
