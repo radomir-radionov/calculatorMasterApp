@@ -1,11 +1,13 @@
-import theme from '@/theme'
 import styled from 'styled-components'
 
 export const DisplayStyled = styled.section`
-  border-bottom: 2px solid ${theme.colors.gray};
+  display: flex;
+  justify-content: end;
+  padding: 2rem 10rem 2rem 0;
+  border-bottom: 2px solid
+    ${({ theme }) => theme.displayBorder};
 `
 
-export const Result = styled.p`
-  font-size: ${theme.fontSizes[8]}px;
-  text-align: right;
+export const Text = styled.p`
+  font-size: ${({ theme }) => theme.fontSizes[8]};
 `

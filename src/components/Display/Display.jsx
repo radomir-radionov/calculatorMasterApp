@@ -1,12 +1,19 @@
 import React from 'react'
-import { DisplayStyled, Result } from './components'
+import { PropTypes } from 'prop-types'
+import { DisplayStyled, Text } from './components'
 
-const Display = ({ value = 4500.233 }) => {
+const Display = ({ value, expression }) => {
   return (
     <DisplayStyled>
-      <Result>{value}</Result>
+      <Text>{expression}</Text>
+      <Text>{value}</Text>
     </DisplayStyled>
   )
 }
 
-export default Display
+Display.propTypes = {
+  value: PropTypes.string,
+  expression: PropTypes.string,
+}
+
+export default React.memo(Display)

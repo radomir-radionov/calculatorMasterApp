@@ -1,11 +1,14 @@
 import React from 'react'
 import { HomeStyled } from './components'
-import Calculator from '@/components/Calculator'
+import ErrorBoundary from '@/components/ErrorBoundary'
+import Calculator from '@/containers/Calculator'
 
 const Home = () => {
   return (
     <HomeStyled>
-      <Calculator />
+      <ErrorBoundary fallback="Something went wrong. Try to reload the page, please!">
+        <Calculator />
+      </ErrorBoundary>
     </HomeStyled>
   )
 }
