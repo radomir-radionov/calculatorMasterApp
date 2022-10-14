@@ -1,6 +1,7 @@
 ## Run app
 
-```npm i  
+```
+   npm i  
    npm run dev
 ```
 
