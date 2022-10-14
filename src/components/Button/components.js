@@ -1,14 +1,19 @@
-import theme from '@/theme'
 import styled from 'styled-components'
 
-export const ButtonStyled = styled.div`
+export const ButtonStyled = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 150px;
-  height: 150px;
-  font-size: ${theme.fontSizes[8]}px;
-  border: 1px solid ${theme.colors.gray};
-  border-radius: 32px;
-  background-color: ${theme.colors.whiteDark};
+  width: 12rem;
+  height: 12rem;
+  font-size: ${({ theme }) => theme.fontSizes[6]};
+  border: 1px solid ${({ theme }) => theme.btnBorder};
+  border-radius: 3.2rem;
+  color: ${({ theme }) => theme.textColor};
+  background-color: ${({ theme }) => theme.btnBg};
+  cursor: pointer;
+
+  &:hover {
+    background-color: ${({ theme }) => theme.btnHoverBg};
+  }
 `
