@@ -11,7 +11,7 @@ import {
 } from '@/utils/index'
 
 const initialState = {
-  displayValue: '0',
+  displayValue: '',
   displayExpression: '',
   isUpdatedExpression: true,
   isCalculated: false,
@@ -37,7 +37,7 @@ export const calculationSlice = createSlice({
         }
         case 'operand': {
           if (/error/i.test(state.displayValue)) {
-            state.displayValue = '0'
+            state.displayValue = ''
             break
           }
           state.displayExpression = `${
@@ -46,7 +46,7 @@ export const calculationSlice = createSlice({
             state.displayValue,
             state.displayExpression,
           )} ${value} `
-          state.displayValue = '0'
+          state.displayValue = ''
           break
         }
         case 'leftBracket': {
@@ -60,7 +60,7 @@ export const calculationSlice = createSlice({
             state.displayExpression,
             state.displayValue,
           )
-          state.displayValue = '0'
+          state.displayValue = ''
           break
         }
         case 'dot': {
@@ -71,7 +71,7 @@ export const calculationSlice = createSlice({
         }
         case 'negate': {
           if (/error/i.test(state.displayValue)) {
-            state.displayValue = '0'
+            state.displayValue = ''
             break
           }
           state.displayValue = negateValue(
@@ -80,18 +80,18 @@ export const calculationSlice = createSlice({
           break
         }
         case 'clearValue': {
-          state.displayValue = '0'
+          state.displayValue = ''
           break
         }
         case 'clearExp': {
-          state.displayValue = '0'
+          state.displayValue = ''
           state.displayExpression = ''
           state.isCalculated = true
           break
         }
         case 'result': {
           if (/error/i.test(state.displayValue)) {
-            state.displayValue = '0'
+            state.displayValue = ''
             break
           }
           const expression = state.displayExpression
@@ -128,7 +128,7 @@ export const calculationSlice = createSlice({
     },
     clearAll(state) {
       state.history = []
-      state.displayValue = '0'
+      state.displayValue = ''
       state.displayExpression = ''
       state.isUpdatedExpression = true
     },
