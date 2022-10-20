@@ -18,11 +18,13 @@ const Keypad = () => {
   return (
     <Wrapper>
       <KeypadStyled>
-        {keypadOptions.map(option => (
+        {keypadOptions.map(({ type, value }) => (
           <Button
             key={uuidv4()}
+            dataTestId={`button-${value}`}
+            type={type}
+            value={value}
             handler={onClickHandler}
-            option={option}
           />
         ))}
       </KeypadStyled>
