@@ -9,5 +9,6 @@ export const DisplayStyled = styled.section`
 `
 
 export const Text = styled.p`
+  min-height: 10rem;
   font-size: ${({ theme }) => theme.fontSizes[8]};
 `

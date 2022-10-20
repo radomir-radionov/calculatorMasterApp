@@ -2,20 +2,24 @@ import React from 'react'
 import { PropTypes } from 'prop-types'
 import { ButtonStyled } from './components'
 
-const Button = ({ option, handler }) => {
-  const { value } = option
-
-  const onClick = () => {
-    handler(option)
+const Button = ({ type, value, handler, dataTestId }) => {
+  const onClickHandler = () => {
+    handler({ type, value })
   }
 
   return (
-    <ButtonStyled onClick={onClick}>{value}</ButtonStyled>
+    <ButtonStyled
+      data-test-id={dataTestId}
+      onClick={onClickHandler}>
+      {value}
+    </ButtonStyled>
   )
 }
 
 Button.propTypes = {
-  option: PropTypes.object,
+  dataTestId: PropTypes.string,
+  type: PropTypes.string,
+  value: PropTypes.string,
   handler: PropTypes.func,
 }
 
