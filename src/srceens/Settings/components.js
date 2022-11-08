@@ -3,8 +3,8 @@ import styled from 'styled-components'
 export const SettingsStyled = styled.div`
   display: flex;
   flex-direction: column;
-  width: 250px;
-  margin: 60px 84px;
+  width: 30rem;
+  margin: 6rem 8rem;
 `
 export const SettingsWrapper = styled.div`
   width: 200px;
@@ -23,10 +23,10 @@ export const Title = styled.h2`
 `
 
 export const Button = styled.button`
-  width: 250px;
-  height: 50px;
+  width: 30rem;
+  height: 5rem;
   margin-top: 32px;
-  padding: 12px;
+  padding: 1.2rem;
   text-align: left;
   font-size: ${({ theme }) => theme.fontSizes[3]};
   border: 1px solid black;

@@ -44,7 +44,9 @@ const Calculator = () => {
         />
         <Keypad onClick={handleKeypadClick} />
       </Wrapper>
-      <HistoryContainer showHistory={showHistory}>
+      <HistoryContainer
+        showHistory={showHistory}
+        data-test-id="history">
         {showHistory && (
           <History
             history={history}

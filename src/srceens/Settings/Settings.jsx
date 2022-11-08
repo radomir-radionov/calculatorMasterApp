@@ -15,7 +15,9 @@ const Settings = () => {
     <SettingsStyled>
       <Title>Settings</Title>
       <DropDown />
-      <Button onClick={onClickClearHistory}>
+      <Button
+        data-test-id="button-clear-all"
+        onClick={onClickClearHistory}>
         Clear All History
       </Button>
     </SettingsStyled>
