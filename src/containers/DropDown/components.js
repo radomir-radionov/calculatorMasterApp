@@ -8,7 +8,7 @@ export const LabelStyled = styled.label`
 `
 
 export const DropDownContainer = styled.div`
-  width: 250px;
+  width: 30rem;
   font-size: ${({ theme }) => theme.fontSizes[3]};
   border-radius: 4px;
 
@@ -20,7 +20,7 @@ export const DropDownContainer = styled.div`
 export const DropDownHeader = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 12px;
+  padding: 1.2rem;
   font-size: ${({ theme }) => theme.fontSizes[3]};
   border: 1px solid black;
   border-radius: 4px;
@@ -36,7 +36,7 @@ export const DropDownListContainer = styled.div`
 `
 
 export const DropDownList = styled.ul`
-  width: 250px;
+  width: 30rem;
   background-color: white;
 `
 

@@ -5,8 +5,10 @@ import { DisplayStyled, Text } from './components'
 const Display = ({ value, expression }) => {
   return (
     <DisplayStyled>
-      <Text>{expression}</Text>
-      <Text>{value}</Text>
+      <Text data-test-id="display-expression">
+        {expression}
+      </Text>
+      <Text data-test-id="display-value">{value}</Text>
     </DisplayStyled>
   )
 }
